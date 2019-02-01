@@ -1,5 +1,10 @@
 # Fixed for VRP OLD By Sun 
 # Fivem Brasil
+# Fivem dev Brasil
+**My contacts:**
+* My email : sun@blackbox.ac
+* My paypal : sun@blackbox.ac for donations
+*  my group fivem server https://www.facebook.com/groups/1489038398088259/
 
 # vrp_spawn_screen
 The following resource will prompt players with a menu the first time they joine the server,
