@@ -15,6 +15,7 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ]]
+ dependency "vrp"
 
 ui_page "nui/ui.html"
 
@@ -28,7 +29,8 @@ files {
 }
 
 client_script{
-			"@vrp/lib/utils.lua",
+			"lib/Proxy.lua",
+			"lib/Tunnel.lua",
 			"ui.lua",
 			"client.lua"
 		}
