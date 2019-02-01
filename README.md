@@ -1,3 +1,6 @@
+# Fixed for VRP OLD By Sun 
+# Fivem Brasil
+
 # vrp_spawn_screen
 The following resource will prompt players with a menu the first time they joine the server,
 after the resource have been installed. The menu will let the user type in their characters first name, last name, age and gender.
