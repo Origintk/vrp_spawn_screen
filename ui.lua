@@ -16,9 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ]]
 
-local servername = "No Life";
+local servername = "Name You Server/Nome server aqui"; 
 
-local menuEnabled = false
+local menuEnabled = false 
 
 AddEventHandler("playerSpawned", function(spawn)
 	SetEntityInvincible(GetPlayerPed(-1),true)
@@ -34,7 +34,7 @@ end)
 
 RegisterNetEvent("KillSpawnMenu")
 AddEventHandler("KillSpawnMenu", function()
-	killSpawnMenu()
+	killSpawnMenu() 
 	DoScreenFadeIn(5000)
 end)
 
@@ -42,22 +42,22 @@ function ToggleSpawnMenu()
 	menuEnabled = not menuEnabled
 	if ( menuEnabled ) then
 		DoScreenFadeOut(1000)
-		SetNuiFocus( true, true )
+		SetNuiFocus( true, true ) 
 		SendNUIMessage({
-			showPlayerMenu = true
+			showPlayerMenu = true 
 		})
-	else
+	else 
 		SetNuiFocus( false )
 		SendNUIMessage({
 			showPlayerMenu = false
 		})
-	end
-end
+	end 
+end 
 
 function killSpawnMenu()
 	SetEntityInvincible(GetPlayerPed(-1),false)
 	SetEntityVisible(GetPlayerPed(-1),true)
-	FreezeEntityPosition(GetPlayerPed(-1),false)
+	FreezeEntityPosition(GetPlayerPed(-1),false) 
 	SetNuiFocus( false )
 	SendNUIMessage({
 		showPlayerMenu = false
@@ -66,7 +66,7 @@ function killSpawnMenu()
 
 end
 
-RegisterNUICallback('close', function(data, cb)
+RegisterNUICallback('close', function(data, cb)  
   ToggleSpawnMenu()
   cb('ok')
 end)
@@ -82,7 +82,7 @@ RegisterNUICallback('spawnButton', function(data, cb)
 		TriggerServerEvent("vrp_spawn_screen:updateinfo", data)
 		TriggerEvent("vrp_spawn_screen:spawn", source, gender)
 		SetNotificationTextEntry("STRING")
-  		AddTextComponentString("~g~Spawn completed. ~w~Welcome to ~b~".. servername .."~w~!")
+  		AddTextComponentString("~g~Mensagem ~w~Aqui ~b~".. servername .."~w~!")
 		DrawNotification(true, false)
 		Citizen.Wait(5000)
   		killSpawnMenu()
